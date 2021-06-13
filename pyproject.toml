@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "singularity-startup"
+version = "0.1.0"
+description = ""
+authors = ["Singularity <tech@singularity.vn>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pelican = "^4.6.0"
+beautifulsoup4 = "^4.9.3"
+rst2pdf = "^0.98"
+pelican-liquid-tags = "^1.0.1"
+PyYAML = "^5.4.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
