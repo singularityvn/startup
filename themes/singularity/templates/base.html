@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
-
+<link rel="icon" type="image/png" href="/favicon.png"/>
+<link rel="icon" type="image/png" href="https://example.com/favicon.png"/>
 <head>
   {% block head %}
   <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="Singularity" />
+  <link rel="icon" type="image/png" href="images/logo.png"/>
   {% if FEED_ALL_ATOM %}
   <link
     href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}"
@@ -97,26 +99,23 @@
         </div>
         <div class="col-lg-2 col-md-6">
           <ul class="list-unstyled mb-3">
-            <li class="mb-3"><span class="initialism text-dark">Company</span></li>
-            <li class="mb-2"><a class="text-muted" href="/pages/page-about.html">About us</a></li>
-            <li class="mb-2"><a class="text-muted" href="/pages/page-pricing.html">Pricing</a></li>
-            <li class="mb-2"><a class="text-muted" href="/pages/page-careers.html">Careers</a></li>
-            <li class="mb-2"><a class="text-muted" href="/pages/page-privacy.html">Privacy policy</a></li>
-            <li class="mb-2"><a class="text-muted" href="/pages/page-faq.html">FAQ</a></li>
+            <li class="mb-3"><span class="initialism text-dark">Về công ty</span></li>
+            <li class="mb-2"><a class="text-muted" href="#">Singularity</a></li>
+            <li class="mb-2"><a class="text-muted" href="#">Tuyển dụng</a></li>
+            <li class="mb-2"><a class="text-muted" href="#">Privacy policy</a></li>
+            <li class="mb-2"><a class="text-muted" href="#">FAQ</a></li>
           </ul>
         </div>
         <div class="col-lg-2 col-md-6">
           <ul class="list-unstyled mb-3">
-            <li class="mb-3"><span class="initialism text-dark">Documentation</span></li>
-            <li class="mb-2"><a class="text-muted" href="/docs/getting_started/docs-introduction.html">Getting
-                started</a></li>
-            <li class="mb-2"><a class="text-muted" href="/docs/getting_started/docs-changelog.html">Changelog</a></li>
-            <li class="mb-2"><a class="text-muted" href="/docs/getting_started/docs-support.html">Support</a></li>
-            <li class="mb-2"><a class="text-muted" href="/docs/graphics/docs-icons.html">Icons</a></li>
+            <li class="mb-3"><span class="initialism text-dark">Công cụ</span></li>
+            <li class="mb-2"><a class="text-muted" href="#">Mô phỏng dòng tiền</a></li>
+            <li class="mb-2"><a class="text-muted" href="#">Startup 101</a></li>
+            <li class="mb-2"><a class="text-muted" href="#">Blog</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="initialism mb-3 text-dark">Daily offers</div>
+          <div class="initialism mb-3 text-dark">Bản tin hàng tuần</div>
           <p class="small text-muted">Join over 10000 others to get access to&nbsp;exclusive content</p>
           <div class="input-group mb-3 p-0 rounded"><input class="form-control p-3 border-0 rounded-left" type="text"
               placeholder="Email address" aria-label="Recipient's email" aria-describedby="button-addon">
