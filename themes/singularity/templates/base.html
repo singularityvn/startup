@@ -5,7 +5,7 @@
   {% block head %}
   <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="Singularity" />
   {% if FEED_ALL_ATOM %}
   <link
@@ -69,10 +69,8 @@
       </div>
     </div>
   </div>
-  <div class="container">
-    {% block content %}
-    {% endblock %}
-  </div>
+  {% block content %}
+  {% endblock %}
 
   <footer id="contentinfo" class="body bg-light">
     <div class="container py-2 main-font small">

@@ -1,0 +1,40 @@
+.masthead-home {
+    background: #f8f9fa;
+    background-image: url(/theme/images/home.svg);
+    background-position: left 50% top -215px;
+    background-repeat: no-repeat;
+    background-size: 400px;
+}
+
+@media (min-width: 481px) {
+    .masthead-home {
+        background-position: left 430px top 50%;
+        background-size: 450px;
+    }
+}
+
+@media (min-width: 865px) {
+    .masthead-home {
+        background-position: left 50vw top 50%;
+    }
+}
+
+
+.masthead-home__container {
+    padding: 176px 24px 72px;
+    box-sizing: content-box;
+    margin: 0 auto;
+    max-width: 960px;
+    overflow: visible;
+}
+
+@media (min-width: 481px){
+    .masthead-home__container {
+        padding: 72px 24px;
+    }
+}
+
+.masthead-home__left {
+    max-width: 408px;
+}
+

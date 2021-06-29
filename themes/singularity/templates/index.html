@@ -1,28 +1,57 @@
 {% extends "base.html" %}
 {% block content %}
-<section id="content">
-{% block content_title %}
-<h2>All articles</h2>
-{% endblock %}
+<div class="masthead-home">
+    <div class="masthead-home__container">
+        <div class="masthead-home__left main-font">
+            <h1>Khởi nghiệp là khoa học </h1>
+            <p>
+                Get the web's modern capabilities on your own sites and apps with useful guidance and analysis from
+                web.dev.
+            </p>
+            <div class="w-masthead-home__buttons">
+                <a href="/measure"
+                    class="gc-analytics-event btn btn-outline-danger"
+                    data-category="web.dev" data-label="home, test site" data-action="click">
+                    Mô phỏng dòng tiền 
+                </a>
+                <a
+                    href="/learn" class="gc-analytics-event btn btn-outline" data-category="web.dev"
+                    data-label="home, start learning" data-action="click">
+                    Định giá startup 
+                </a>
+                </div>
+        </div>
+    </div>
+</div>
 
-<ol id="post-list">
-{% for article in articles_page.object_list %}
-        <li><article class="hentry">
-                <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
+<section id="content">
+    {% block content_title %}
+    <h2>All articles</h2>
+    {% endblock %}
+
+    <ol id="post-list">
+        {% for article in articles_page.object_list %}
+        <li>
+            <article class="hentry">
+                <header>
+                    <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+                            title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+                </header>
                 <footer class="post-info">
                     <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
                     <address class="vcard author">By
-                    {% for author in article.authors %}
+                        {% for author in article.authors %}
                         <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-                    {% endfor %}
+                        {% endfor %}
                     </address>
                 </footer><!-- /.post-info -->
                 <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
-        </article></li>
-{% endfor %}
-</ol><!-- /#posts-list -->
-{% if articles_page.has_other_pages() %}
+            </article>
+        </li>
+        {% endfor %}
+    </ol><!-- /#posts-list -->
+    {% if articles_page.has_other_pages() %}
     {% include 'pagination.html' %}
-{% endif %}
+    {% endif %}
 </section><!-- /#content -->
 {% endblock content %}
