@@ -47,6 +47,7 @@ EXTRA_PATH_METADATA = {
 
 STATIC_PATHS = [
     'extra',
+    'images'
 ]
 
 PLUGINS = ["extract_toc", "author", "simple_footnotes"]

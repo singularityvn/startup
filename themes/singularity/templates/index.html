@@ -5,8 +5,7 @@
         <div class="masthead-home__left main-font">
             <h1>Khởi nghiệp là khoa học </h1>
             <p>
-                Get the web's modern capabilities on your own sites and apps with useful guidance and analysis from
-                web.dev.
+                Không có công thức cho khởi nghiệp thành công. Nhưng bạn có thể tránh được thất bại khi đứng trên vai người khổng lồ.
             </p>
             <div class="w-masthead-home__buttons">
                 <a href="/measure"
@@ -24,34 +23,37 @@
     </div>
 </div>
 
-<section id="content">
-    {% block content_title %}
-    <h2>All articles</h2>
-    {% endblock %}
-
-    <ol id="post-list">
-        {% for article in articles_page.object_list %}
-        <li>
-            <article class="hentry">
-                <header>
-                    <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-                            title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
-                </header>
-                <footer class="post-info">
-                    <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
-                    <address class="vcard author">By
-                        {% for author in article.authors %}
-                        <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-                        {% endfor %}
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
-            </article>
-        </li>
-        {% endfor %}
-    </ol><!-- /#posts-list -->
-    {% if articles_page.has_other_pages() %}
-    {% include 'pagination.html' %}
-    {% endif %}
-</section><!-- /#content -->
+<!-- /#content -->
+<section>
+    <div class="container">
+        <header class="text-center main-font">
+            <h2 class="text-black-50">
+                Explore topics
+            </h2>
+            <p class="">Learn more about a topic, and practice your skills with a hands-on codelab.</p>
+        </header>
+        <div class="row">
+            <div class="col-sm-4 col-m-6">
+                <a href="" class="w-card text-decoration-none main-font" role="listitem">
+                    <div class="w-path-card">
+                        <div class="w-path-card__info">
+                            <ul class="w-path-card__info-list">
+                                <li class="w-path-card__info-listitem w-path-card__info-listitem--category">Collection</li>
+                                <li class="w-path-card__info-listitem w-path-card__info-listitem--more-info">19 resources</li>
+                            </ul>
+                        </div>
+                        <div class="w-path-card__cover">
+                            <img src="https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/dYAbN2LdttJ1qYk1gssh.svg" alt="" class="w-path-card__cover-image">
+                        </div>
+                        <div class="w-path-card__desc">
+                            <h4 class="w-path-card__headline text-decoration-none text-body">Web Vitals</h4>
+                            <p class="w-path-card__subhead text-decoration-none">Essential metrics for a healthy site.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /#content -->
 {% endblock content %}
