@@ -41,6 +41,14 @@ PLUGIN_PATHS = [
     "plugins",
 ]
 
+EXTRA_PATH_METADATA = {
+    'extra/CNAME': {'path': 'CNAME'},
+}
+
+STATIC_PATHS = [
+    'extra',
+]
+
 PLUGINS = ["extract_toc", "author", "simple_footnotes"]
 
 DEFAULT_DATE_FORMAT = "%d-%m-%Y"
