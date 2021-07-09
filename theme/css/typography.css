@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+:root {
+    --bs-font-monospace: Inconsolata, monospace;
+    --bs-font-sans-serif: Lora, serif;
+    --sg-font-main: "Inter", system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.main-font {
+    font-family: var(--sg-font-main);
+}
+
+h2 {
+    margin: 1em 0;
+}
+
+tt {
+    font-family: var(--bs-font-sans-serif);
+    font-style: italic;
+    font-weight: 700;
+}
+
+pre {
+    padding: 8px;
+    border: 1px solid #f1eeee;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.instruction-box {
+    background-color: var(--bs-light);
+    border-radius: 4px;
+    /* border-bottom: 1px solid var(--bs-gray); */
+}
+
+.toc-backref {
+    color: #000;
+    text-decoration: none;
+}
+
+.figure .caption {
+    font-style: italic;
+    font-size: 90%;
+    padding: 8px 0;
+}
+
+.sidebar {
+    font-style: italic;
+    width: 20em;
+    background-color: var(--bs-light);
+    padding: 1em;
+}
+
+@media (min-width: 900px) {
+    .sidebar {
+        margin-right: -250px;
+        float: right;
+        margin: 0 -250px 0 2em;
+    }
+}
+
+.toc a.reference {
+    text-decoration: none;
+}
+
+.toc .topic-title {
+    font-size: larger;
+    font-weight: 700;
+}
+
+h2.entry-title a {
+    text-decoration: none;
+    color: var(--bs-dark);
+    font-size: 4rem;
+}
+
+footer a {
+    color: #393d41;
+    text-decoration: none;
+}
+
+footer a:hover {
+    opacity: 0.6;
+}

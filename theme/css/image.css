@@ -1,0 +1,43 @@
+.header-logo {
+    height: 32px;
+}
+
+.figure img {
+    width: 100%;
+}
+
+.figure {
+    background-color: var(--bs-light);
+    border-radius: 4px;
+    padding: 2px 4px;
+    margin-bottom: 0.5em;
+}
+
+.figure.align-right {
+    float: right;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.rounded-circle {
+    border-radius: 50%!important;
+}
+
+.avatar {
+    position: relative;
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.33333rem;
+}
+
+.avatar-xs {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: .83333rem;
+}
